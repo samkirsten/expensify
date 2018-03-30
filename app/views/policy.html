@@ -1,0 +1,64 @@
+{% extends "layout-unlogged.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        {% if serviceName %} {{ serviceName }} {% endif %}
+      </h1>
+
+      
+      <h2 class="heading-large">
+        Expenses policy
+      </h2>
+
+      <h3 class="heading-medium">Breakfast</h3>
+
+      <ul class="list list-bullet">
+      <li>£8 allowance</li>
+      <li>You must have left your home before 06:30 or have stayed overnight in a hotel where breakfast is not included in the rate.</li>
+      </ul>
+       
+      
+      <h3 class="heading-medium">Lunch</h3>
+      <ul class="list list-bullet">
+      <li>£8 allowance</li>
+      <li>You must have been away from your usual place of work for 5 hours or more.</li>
+    </ul>
+      <h3 class="heading-medium">Dinner</h3>
+      <ul class="list list-bullet">
+      <li>£18 allowance</li>
+      <li>You must return to your home after 21:00 or are about to stay overnight in a hotel.</li>
+    </ul>
+      
+
+    </div>
+    <div class="column-third">
+
+      <aside class="govuk-related-items" role="complementary">
+        <h2 class="heading-medium" id="subsection-title">External Links</h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="font-xsmall">
+            <li><a href="index">Manage your expenses</a></li>
+            <li><a href="#">Clarity travel booking</a></li>
+            <li><a href="#" class="bold-xsmall">More <span class="visuallyhidden">in Subsection</span></a></li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
+
+

@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Submit your expense
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+    <div class="breadcrumbs">
+        <ol>
+          <li><a href="/start">Start</a></li>
+          <li><a href="create-claim">Create claim</a></li>
+          <li><a href="add-claim-items">Add claim items</a></li>
+          <li><a href="review-claim">Review claim</a></li>
+          <li><a href="submit-claim">Submit claim</a></li>
+        </ol>
+      </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        Submit your expense
+      </h1>
+
+      <div class="form-group">
+      <div class="notice">
+        <i class="icon icon-important">
+          <span class="visually-hidden">Warning</span>
+        </i>
+        <strong class="bold-small">
+          You will not be able to edit your claim beyond this point.
+        </strong>
+      </div>
+    </div>
+      <div class="form-group">
+        <p>If you have claimed more than the allowance you will only receive the maximum allowance.</p>
+      </div>
+      <div class="form-group">
+        <p>Are you happy to submit your expense?</p>
+      </div>
+      <div class="form-group">
+        <a href="confirmation" class="button">Submit</a>
+    </div>
+    </div>
+    <div class="column-third">
+
+      <aside class="govuk-related-items" role="complementary">
+        <h2 class="heading-medium" id="subsection-title">External Links</h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="font-xsmall">
+            <li><a href="index">Manage your expenses</a></li>
+            <li><a href="#">Clarity travel booking</a></li>
+            <li><a href="#" class="bold-xsmall">More <span class="visuallyhidden">in Subsection</span></a></li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
+
+

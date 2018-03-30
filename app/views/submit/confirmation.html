@@ -1,0 +1,94 @@
+{% extends "govuk_template.html" %}
+
+{% block page_title %}
+  Confirm your claim
+{% endblock %}
+
+{% block head %}
+  {% include "includes/phase_banner_alpha.html" %}
+  {% include "includes/head.html" %}
+{% endblock %}
+
+{% block cookie_message %}
+  <p>{{cookieText | safe }}</p>
+{% endblock %}
+
+{% block proposition_header %}
+
+  <div class="header-proposition">
+    <div class="content">
+      <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
+      <nav id="proposition-menu">
+        <a href="/" id="proposition-name">
+          {# Set serviceName in config.js. Use a block to override on a page. #}
+          {% block service_name %}
+            {% if serviceName %} {{ serviceName }} {% endif %}
+          {% endblock %}
+        </a>
+        <!--
+        <ul id="proposition-links">
+          <li><a href="url-to-page-1" class="active">Navigation item #1</a></li>
+          <li><a href="url-to-page-2">Navigation item #2</a></li>
+        </ul>
+        -->
+      </nav>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block header_class %}
+  with-proposition
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="govuk-box-highlight">
+        <h1 class="heading-xlarge">
+          Expense submitted
+        </h1>
+        <p class="font-large">
+          Your reference number is <br>
+          <strong class="bold">HDJ2123F</strong>
+        </p>
+      </div>
+
+      <p>
+        We have sent you a confirmation email.
+      </p>
+
+      <h2 class="heading-medium">What happens next</h2>
+      <p>Your claim has now been sent to CS Finance.</p>
+      <p>Once approved you will be notified by email and will receive the funds into your bank account within 3-5 working days.</p>
+      <p><a href="https://www.gov.uk/service-manual/user-centred-design/resources/patterns/feedback-pages.html">What did you think of this service?</a> (takes 30 seconds)</p>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
+
+
+{% block footer_support_links %}
+  {% if useAutoStoreData %}
+    <ul>
+      <li>
+        <a href="/prototype-admin/clear-data">Clear data</a>
+      </li>
+    </ul>
+  {% endif %}
+{% endblock %}
+
+{% block body_end %}
+  {% block scripts %}
+    {% include "includes/scripts.html" %}
+    {% block page_scripts %}{% endblock %}
+  {% endblock %}
+  <!-- GOV.UK Prototype kit {{releaseVersion}} -->
+{% endblock %}

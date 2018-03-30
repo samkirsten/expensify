@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+    Welcome, Nicky Arnold
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="https://www.gov.uk">Home</a></li>
+      <li><a href="">Section</a></li>
+      <li>Subsection</li>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        Nicky's Expense Account
+      </h1>
+    
+      <h2 class="heading-large">Review my claims</h2>
+      <div class="form-group">
+        <a href="expense-status" class="button">Review my claims</a>
+      </div>
+      <h2 class="heading-large">Make a new claim</h2>
+      <div class="form-group">
+        <a href="/submit/create-claim" class="button">New expense claim</a>
+      </div>
+      <h2 class="heading-large">View my profile</h2>
+      <div class="form-group">
+        <a href="view-details" class="button">View my profile</a>
+      </div>
+    </div>
+    <div class="column-third">
+
+      <aside class="govuk-related-items" role="complementary">
+        <h2 class="heading-medium" id="subsection-title">External Links</h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="font-xsmall">
+            <li><a href="policy">View expense policy</a></li>
+            <li><a href="#">Clarity travel booking</a></li>
+            <li><a href="#" class="bold-xsmall">More <span class="visuallyhidden">in Subsection</span></a></li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
+
+

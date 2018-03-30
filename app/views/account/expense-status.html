@@ -1,0 +1,116 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Expenses: Nicky Arnold
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a href="#" class="link-back">Back</a>
+
+      <h1 class="heading-large">
+        My Claims
+      </h1>
+
+      <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+      <!--   * `cya-questions-short` for short questions -->
+      <!--   * `cya-questions-long` for long questions -->
+      <!--   * none for single group of q&a -->
+      <div class="form-group">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col" scope="col" style="width: 20%">Claim Name</th>
+                <th class="col" scope="col">Date Submitted</th>
+                <th class="col" scope="col">Reference Number</th>
+                <th class="col" scope="col">Status</th>
+                <th class="col" scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="col">
+                      <p>Manchester Course</p>
+                    </td>
+                    <td class="col">
+                        <p>23/02/2018</p>
+                  </td>
+                    <td class="col">
+                      <p>ABC12345</p>
+                    </td>
+                    <td class="col">
+                      <p>Waiting</p>
+                    </td>
+                    <td class="col">
+                        <a href="expense-detail"><p>View</p></a>
+                    </td>
+                  </tr>
+                  <tr>
+                      <td scope="col">
+                        <p>Weekly Travel</p>
+                      </td>
+                      <td class="col">
+                          <p>24/01/2018</p>
+                    </td>
+                      <td class="col">
+                        <p>GHF56742</p>
+                      </td>
+                      <td class="col">
+                        <p>Approved</p>
+                      </td>
+                      <td class="col">
+                          <a href="expense-detail"><p>View</p></a>
+                      </td>
+                    </tr>
+                    <tr>
+                            <td scope="col">
+                              <p>Monthly Food</p>
+                            </td>
+                            <td class="col">
+                                <p>25/12/2017</p>
+                          </td>
+                            <td class="col">
+                              <p>XMAS1237</p>
+                            </td>
+                            <td class="col">
+                              <p>Rejected</p>
+                            </td>
+                            <td class="col">
+                                <a href="expense-detail"><p>View</p></a>
+                            </td>
+                          </tr>
+            </tbody>
+          </table>
+        </div>
+  
+<!--
+      <p class="text">
+        By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.
+      </p>
+    -->
+      <div class="form-group">
+        <a href="account-home" class="button">Back to account home</a>
+      </div>
+
+    </div>
+    <div class="column-third">
+
+        <aside class="govuk-related-items" role="complementary">
+          <h2 class="heading-medium" id="subsection-title">External Links</h2>
+          <nav role="navigation" aria-labelledby="subsection-title">
+            <ul class="font-xsmall">
+              <li><a href="index">Manage your expenses</a></li>
+              <li><a href="#">Clarity travel booking</a></li>
+              <li><a href="#" class="bold-xsmall">More <span class="visuallyhidden">in Subsection</span></a></li>
+            </ul>
+          </nav>
+        </aside>
+  
+      </div>
+  </div>
+</main>
+
+{% endblock %}

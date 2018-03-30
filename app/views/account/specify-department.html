@@ -1,0 +1,58 @@
+{% extends "layout-unlogged.html" %}
+
+{% block page_title %}
+  Personal details
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+
+  <form class="form">
+
+    <h1 class="form-title heading-large">Please select your department</h1>
+
+    <!-- Location picker -->
+    <div class="form-group">
+      <label class="form-label-bold" for="location-select-dropdown">
+          Start typing your department name
+      </label>
+      <div class="form-control-1-2">
+        <select class="form-control" id="location-select-dropdown">
+          <option value="" disabled selected>
+            Choose a location
+          </option>
+          {% for name in names %}
+            <option value="{{name}}">{{name}}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+        <a href="account-details" class="button">Next</a>
+    </div>
+  </form>
+
+</main>
+{% endblock %}
+
+{% block body_end %}
+  <link rel="stylesheet" href="https://unpkg.com/accessible-typeahead@0.4.1/dist/styled.min.css">
+  <style>
+    .typeahead__menu--inline {
+      max-height: none;
+      overflow-x: visible;
+    }
+  </style>
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/registers-picker-engine@0.0.2"></script>
+  <script type="text/javascript" src="https://unpkg.com/accessible-typeahead@0.4.1"></script>
+  <script type="text/javascript">
+    var dataFilePath = 'https://government-organisation.register.gov.uk/records.json'
+    AccessibleTypeahead.enhanceSelectElement({
+      autoselect: true,
+      selectElement: document.getElementById('location-select-dropdown'),
+      minLength: 2,
+      source: locationPickerSuggestions(dataFilePath)
+    })
+  </script>
+{% endblock %}

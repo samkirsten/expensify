@@ -1,0 +1,61 @@
+{% extends "layout-unlogged.html" %}
+
+{% block page_title %}
+  {{serviceName}}
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        {% if serviceName %} {{ serviceName }} {% endif %}
+      </h1>
+
+      <p>You will need the following information:</p>
+
+      <ul class="list list-bullet">
+        <li>Date of the expenditure</li>
+        <li>Location of the expenditure</li>
+        <li>Receipt or proof of purchase</li>
+      </ul>
+
+      <p>Claiming expenses usually takes about 5 minutes.</p>
+
+      <p>
+        <a class="button button-start" href="login" role="button">Start now</a>
+      </p>
+
+      <h2 class="heading-medium">Before you start</h2>
+
+      <p>You can also <a href="lol">claim by post.</a></p>
+
+      <p>The online service is also available in <a href="#">Welsh (Cymraeg).</a></p>
+
+      <p>You can’t use this service if you are not directly employed by the Civil Service.</p>
+
+    </div>
+    <div class="column-third">
+
+      <aside class="govuk-related-items" role="complementary">
+        <h2 class="heading-medium" id="subsection-title">External Links</h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="font-xsmall">
+            <li><a href="policy">View expense policy</a></li>
+            <li><a href="#">Clarity travel booking</a></li>
+            <li><a href="#" class="bold-xsmall">More <span class="visuallyhidden">in Subsection</span></a></li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
+
+

@@ -1,0 +1,119 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Add expense items
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column">
+        <div class="breadcrumbs">
+            <ol>
+              <li><a href="/start">Start</a></li>
+              <li><a href="create-claim">Create claim</a></li>
+              <li><a href="add-claim-items">Add claim items</a></li>
+            </ol>
+          </div>
+
+      <h2 class="heading-large">
+        Claim: {{ data['claim-name'] }}
+      </h2>
+
+      <details>
+
+          <summary><span class="summary">What is accepted as evidence</span></summary>
+        
+          <div class="panel panel-border-narrow">
+        
+              <ul class="list list-bullet">
+                  <li>Receipt</li>
+                  <li>e-Receipt</li>
+                  <li>Bank statement</li>
+                  <li>Ticket</li>
+                </ul>          
+        
+          </div>
+        
+        </details>
+
+        <details>
+
+            <summary><span class="summary">What if I have spent more than my allowance</span></summary>
+          
+            <div class="panel panel-border-narrow">
+          
+              <p>
+                You will receive up the amount specifed in the policy. Any additional spend must be covered by you. 
+              </p>
+          
+            </div>
+          
+          </details>
+
+      <h2 class="heading-medium">
+        Add your expense item(s)
+      </h2>
+
+      <div class="form-group">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col" scope="col" style="width: 20%">Item</th>
+            <th class="col" scope="col">Date</th>
+            <th class="col" scope="col">Amount</th>
+            <th class="col" scope="col">Evidence</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td scope="col" style="min-width: 20%">
+                <select class="form-control" id="select-box" name="select-box" style="min-width: 100%">
+                    <option>Breakfast</option>
+                    <option>Lunch</option>
+                    <option>Dinner</option>
+                    <option>Travel</option>
+                  </select>
+            </td>
+            <td class="col">
+                <input class="form-control table-input" id="full-name-f1" type="text" name="full-name-f1">
+          </td>
+            <td class="col">
+              <input class="form-control table-input" id="full-name-f1" type="text" name="full-name-f1">
+            </td>
+            <td class="col">
+              <input type="file" id="file-input">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="form-group">
+        <a href="add-expense-item-data" class="button">Add new item</a>
+      </div>
+
+      <div class="form-group">
+        <a href="review-expense" class="button">Continue</a>
+      </div>
+
+    </div>
+    <div class="column">
+
+        <aside class="govuk-related-items" role="complementary">
+          <h2 class="heading-medium" id="subsection-title">External Links</h2>
+          <nav role="navigation" aria-labelledby="subsection-title">
+            <ul class="font-xsmall">
+              <li><a href="#">View expense policy</a></li>
+              <li><a href="#">Clarity travel booking</a></li>
+              <li><a href="#" class="bold-xsmall">More <span class="visuallyhidden">in Subsection</span></a></li>
+            </ul>
+          </nav>
+        </aside>
+  
+      </div>
+  </div>
+</main>
+
+{% endblock %}

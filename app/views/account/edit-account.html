@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+    Welcome, Nicky Arnold
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a href="#" class="link-back">Back</a>
+
+      <h1 class="heading-large">
+        Your account details
+      </h1>
+
+
+      <!-- only add a heading for a list if there is more than one list -->
+      <h2 class="heading-medium">
+        Personal details
+      </h2>
+
+      <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+      <!--   * `cya-questions-short` for short questions -->
+      <!--   * `cya-questions-long` for long questions -->
+      <!--   * none for single group of q&a -->
+      <div class="form-group">
+      <dl class="govuk-check-your-answers cya-questions-short">
+        <div>
+          <dt class="cya-question">
+            First Name
+          </dt>
+          <dd class="cya-answer">
+            <input class="form-control table-input" id="full-name-f1" type="text" name="full-name-f1">
+          </dd>
+        </div>
+
+        <div>
+                <dt class="cya-question">
+                  Last Name
+                </dt>
+                <dd class="cya-answer">
+                    <input class="form-control table-input" id="full-name-f1" type="text" name="full-name-f1">
+                </dd>
+              </div>
+
+        <div>
+          <dt class="cya-question">
+            Date of birth
+          </dt>
+          <dd class="cya-answer">
+            <input class="form-control table-input" id="full-name-f1" type="text" name="full-name-f1">
+          </dd>
+
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Staff Number
+          </dt>
+          <dd class="cya-answer">
+            <input class="form-control table-input" id="full-name-f1" type="text" name="full-name-f1">
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Department
+          </dt>
+          <dd class="cya-answer">
+            <input class="form-control table-input" id="full-name-f1" type="text" name="full-name-f1">
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Email address
+          </dt>
+          <dd class="cya-answer">
+            <input class="form-control table-input" id="full-name-f1" type="text" name="full-name-f1">
+          </dd>
+        </div>
+   
+      </dl>
+
+</div>
+<div class="form-group">
+        <h3 class="heading-medium">Enter your password to confirm changes</h3>
+</div>
+
+<div class="form-group">
+<input class="form-control table-input" id="full-name-f1" type="text" name="full-name-f1">
+</div>
+
+      <div class="form-group">
+            <a href="view-details" class="button">Change details</a>
+          </div>
+    
+          <div class="form-group">
+             <a href="view-details" class="button">Back to account</a>
+        </div>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

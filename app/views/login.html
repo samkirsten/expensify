@@ -1,0 +1,59 @@
+{% extends "layout-unlogged.html" %}
+
+{% block page_title %}
+  {{serviceName}}
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        Login to {% if serviceName %} {{ serviceName }} {% endif %}
+      </h1>
+
+      <div class="form-group">
+        <label class="form-label" for="first-name-2">Username</label>
+        <input class="form-control" id="first-name-2" name="first-name-2" type="text">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="last-name-2">Password</label>
+        <input class="form-control" id="last-name-2" name="last-name-2" type="password">
+      </div>
+      <div class="form-group">
+        <a href="start" class="button">Login</a>
+      </div>
+
+      <div class="form-group">
+          <h2 class="heading-large">Not got an account?</h2>
+      </div>
+
+        <div class="form-group">
+          <a href="account/personal-details" class="button">Create an account</a>
+        </div>
+
+    </div>
+    <div class="column-third">
+
+      <aside class="govuk-related-items" role="complementary">
+        <h2 class="heading-medium" id="subsection-title">External Links</h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="font-xsmall">
+            <li><a href="policy">View expense policy</a></li>
+            <li><a href="#">Clarity travel booking</a></li>
+            <li><a href="#" class="bold-xsmall">More <span class="visuallyhidden">in Subsection</span></a></li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
+
+

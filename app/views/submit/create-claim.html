@@ -1,0 +1,103 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Create claim
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+        <div class="breadcrumbs">
+            <ol>
+              <li><a href="/start">Start</a></li>
+              <li><a href="">Create claim</a></li>
+            </ol>
+          </div>
+
+      <h1 class="heading-large">
+        Create a new expense claim
+      </h1>
+
+      <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+      <!--   * `cya-questions-short` for short questions -->
+      <!--   * `cya-questions-long` for long questions -->
+      <!--   * none for single group of q&a -->
+<div class="form-group">
+    <h1 class="heading-medium">Name your claim</h1>
+    <div class="panel panel-border-wide">
+        <p>
+          Use a familiar name you will remember. E.g: 03/03/18 - Manchester.
+        </p>
+      </div>
+<input name="claim-name" class="form-control" id="full-name-f1" type="text">
+</div>
+
+<div class="form-group">
+    <fieldset>
+
+      <legend>
+        <h1 class="heading-medium">Reason for your claim</h1>
+      </legend>
+
+      <div class="multiple-choice">
+        <input id="radio-1" type="radio" name="radio-group" value="Event Attendance">
+        <label for="radio-1">Event Attendance</label>
+      </div>
+      <div class="multiple-choice">
+        <input id="radio-2" type="radio" name="radio-group" value="Training">
+        <label for="radio-2">Training</label>
+      </div>
+      <div class="multiple-choice">
+        <input id="radio-3" type="radio" name="radio-group" value="Regular travel">
+        <label for="radio-3">Regular travel</label>
+      </div>
+      <div class="multiple-choice">
+        <input id="radio-3" type="radio" name="radio-group" value="Incident, Emergency or Disaster Support">
+        <label for="radio-3">Incident, Emergency or Disaster Support</label>
+      </div>
+      <div class="multiple-choice">
+        <input id="radio-3" type="radio" name="radio-group" value="Internal Meeting">
+        <label for="radio-3">Internal Meeting</label>
+      </div>
+      <div class="multiple-choice">
+          <input id="radio-3" type="radio" name="radio-group" value="External Meeting">
+          <label for="radio-3">External Meeting</label>
+      </div>
+      <div class="multiple-choice" data-target="contact-by-text">
+          <input id="example-contact-by-text" type="radio" name="radio-contact-group" value="No">
+          <label for="example-contact-by-text">Other</label>
+        </div>
+        <div class="panel panel-border-narrow js-hidden" id="contact-by-text">
+          <label class="form-label" for="contact-text-message">Please specify</label>
+          <input class="form-control" name="contact-text-message" type="text" id="contact-text-message">
+        </div>
+
+
+    </fieldset>
+  </div>
+
+      <div class="form-group">
+        <a href="add-expense-item" class="button">Next</a>
+      </div>
+
+    </div>
+    <div class="column-third">
+
+        <aside class="govuk-related-items" role="complementary">
+          <h2 class="heading-medium" id="subsection-title">External Links</h2>
+          <nav role="navigation" aria-labelledby="subsection-title">
+            <ul class="font-xsmall">
+              <li><a href="#">View expense policy</a></li>
+              <li><a href="#">Clarity travel booking</a></li>
+              <li><a href="#" class="bold-xsmall">More <span class="visuallyhidden">in Subsection</span></a></li>
+            </ul>
+          </nav>
+        </aside>
+  
+      </div>
+  </div>
+</main>
+
+{% endblock %}

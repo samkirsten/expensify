@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Review {{ data['claim-name'] }}
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a href="#" class="link-back">Back</a>
+
+      <h1 class="heading-large">
+        Review: Manchester Expenses
+      </h1>
+
+
+      <!-- only add a heading for a list if there is more than one list -->
+      <h3 class="heading-medium">
+        Expense items
+      </h3>
+
+      <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+      <!--   * `cya-questions-short` for short questions -->
+      <!--   * `cya-questions-long` for long questions -->
+      <!--   * none for single group of q&a -->
+      <div class="form-group">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col" scope="col" style="width: 20%">Item</th>
+                <th class="col" scope="col">Date</th>
+                <th class="col" scope="col">Amount</th>
+                <th class="col" scope="col">Evidence</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="col">
+                      <p>Dinner</p>
+                    </td>
+                    <td class="col">
+                        <p>23/02/2018</p>
+                  </td>
+                    <td class="col">
+                      <p>£14.50</p>
+                    </td>
+                    <td class="col">
+                      <p>photo_of_receipt.png</p>
+                    </td>
+                  </tr>
+                  <tr>
+                      <td scope="col">
+                        <p>Travel</p>
+                      </td>
+                      <td class="col">
+                          <p>23/02/2018</p>
+                    </td>
+                      <td class="col">
+                        <p>£4.80</p>
+                      </td>
+                      <td class="col">
+                        <p>photo_of_ticket.png</p>
+                      </td>
+                    </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class='form-group'>
+          <h3 class='heading-medium'>Total: £19.30</h3>
+        </div>
+  
+<!--
+      <p class="text">
+        By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.
+      </p>
+    -->
+      <div class="form-group">
+        <a href="expense-status" class="button">Back</a>
+      </div>
+
+    </div>
+    <div class="column-third">
+
+        <aside class="govuk-related-items" role="complementary">
+          <h2 class="heading-medium" id="subsection-title">External Links</h2>
+          <nav role="navigation" aria-labelledby="subsection-title">
+            <ul class="font-xsmall">
+              <li><a href="index">Manage your expenses</a></li>
+              <li><a href="#">Clarity travel booking</a></li>
+              <li><a href="#" class="bold-xsmall">More <span class="visuallyhidden">in Subsection</span></a></li>
+            </ul>
+          </nav>
+        </aside>
+  
+      </div>
+  </div>
+</main>
+
+{% endblock %}
